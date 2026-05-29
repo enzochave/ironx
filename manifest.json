@@ -3,9 +3,8 @@
   "short_name": "IronX",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#050505",
-  "theme_color": "#ff003c",
-  "orientation": "portrait",
+  "background_color": "#0b0f14",
+  "theme_color": "#1f6fff",
   "icons": [
     {
       "src": "icon-192.png",
