@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronX</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">IX</div>
+    <div>
+      <h1>IronX</h1>
+      <span>Fitness Tracker</span>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <button id="goalBtn">Meta</button>
+    <button id="settingsBtn">⚙️</button>
+  </div>
+</header>
+
+<section class="dashboard">
+
+  <div class="dashboard-card highlight">
+    <h2>Seu progresso diário</h2>
+    <p>Acompanhe calorias, proteínas e treinos</p>
+
+    <button id="newDayBtn">+ Criar novo dia</button>
+  </div>
+
+  <div class="dashboard-card">
+    <h3>Resumo rápido</h3>
+    <div id="quickStats">
+      <p>Sem dados ainda</p>
+    </div>
+  </div>
+
+</section>
+
+<main id="daysContainer"></main>
+
+<!-- ================= CALORIAS ================= -->
+<div class="modal hidden" id="calorieModal">
+  <div class="modal-box">
+    <button class="close" data-close="calorieModal">×</button>
+
+    <h2>Adicionar calorias</h2>
+
+    <input id="foodName" placeholder="Alimento">
+    <input id="foodCalories" type="number" placeholder="Calorias">
+
+    <button id="saveCalories">Adicionar</button>
+  </div>
+</div>
+
+<!-- ================= PROTEÍNAS ================= -->
+<div class="modal hidden" id="proteinModal">
+  <div class="modal-box">
+    <button class="close" data-close="proteinModal">×</button>
+
+    <h2>Adicionar proteína</h2>
+
+    <input id="proteinFood" placeholder="Ex: banana">
+
+    <button id="addProtein">Adicionar</button>
+
+    <div id="proteinResult"></div>
+  </div>
+</div>
+
+<!-- ================= TREINO ================= -->
+<div class="modal hidden" id="workoutModal">
+  <div class="modal-box">
+    <button class="close" data-close="workoutModal">×</button>
+
+    <h2>Lista de treino</h2>
+
+    <input id="workoutInput" placeholder="Ex: Supino reto">
+
+    <button id="addWorkout">Adicionar exercício</button>
+
+    <div id="workoutList"></div>
+  </div>
+</div>
+
+<!-- ================= RESUMO ================= -->
+<div class="modal hidden" id="summaryModal">
+  <div class="modal-box">
+    <button class="close" data-close="summaryModal">×</button>
+
+    <h2>Resumo do dia</h2>
+
+    <div id="summaryContent"></div>
+  </div>
+</div>
+
+<!-- ================= META ================= -->
+<div class="modal hidden" id="goalModal">
+  <div class="modal-box">
+    <button class="close" data-close="goalModal">×</button>
+
+    <h2>Calcular meta diária</h2>
+
+    <select id="gender">
+      <option>Homem</option>
+      <option>Mulher</option>
+    </select>
+
+    <input id="weight" type="number" placeholder="Peso (kg)">
+    <input id="height" type="number" placeholder="Altura (cm)">
+    <input id="age" type="number" placeholder="Idade">
+
+    <button id="calcGoal">Calcular</button>
+
+    <div id="goalResult"></div>
+  </div>
+</div>
+
+<!-- ================= CONFIG ================= -->
+<div class="modal hidden" id="settingsModal">
+  <div class="modal-box">
+    <button class="close" data-close="settingsModal">×</button>
+
+    <h2>Configurações</h2>
+
+    <button id="toggleTheme">Alternar tema</button>
+    <button id="reset">Resetar dados</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
